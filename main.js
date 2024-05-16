@@ -48,7 +48,7 @@ async function showForecast(url) {
                     <li>Niederschlag (mm): ${details.precipitation_amount}</li>
                     <li>Luftfeuchtigkeit (%): ${details.relative_humidity}</li>
                     <li>Windrichtung (°): ${details.wind_from_direction}</li>
-                    <li>Windgeschwindigkeit (km/h): ${details.wind_speed}</li>
+                    <li>Windgeschwindigkeit (km/h): ${Math.round(details.wind_speed * 3.6)}</li>
                 </ul>
             `;
             L.popup(latlng, {
